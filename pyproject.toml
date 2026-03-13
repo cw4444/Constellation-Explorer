@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "constellation-explorer"
+version = "0.1.0"
+description = "Procedural star-system generator CLI"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Codex Agent"}]
+
+[project.scripts]
+constellation = "constellation_explorer.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
